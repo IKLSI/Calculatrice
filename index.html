@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html> 
+   <head> 
+      <title>Calculatrice en ligne</title>
+      <link href="https://cdn-icons-png.flaticon.com/512/1048/1048913.png" rel="icon" type="image/x-icon">
+      <script> 
+         function calculer() 
+         { 
+             let a = document.getElementById("output").value 
+             let b = eval(a) 
+             document.getElementById("output").value = b 
+         } 
+
+         function afficher(val) 
+         { 
+             document.getElementById("output").value+=val 
+         } 
+
+         { 
+             document.getElementById("output").value = "" 
+         } 
+
+         function effacer() 
+         { 
+             document.getElementById("output").value = "" 
+         } 
+      </script>
+      </script>
+      <style>
+         body {
+            background: url("https://www.mistergratos.fr/uploads/wallpapers/calculatrice-stylo-et-comptes-1920x1080.e16c65e2-8378-4f64-8350-bc1a371ee557.jpg");
+         }
+
+         td button {
+         width: 100%;
+         height: 40px;
+         background-color: black;
+         color: antiquewhite;
+         }
+
+         #output {
+            width: 40%;
+            text-align: center;
+         }
+
+         table {
+         width: 35%;
+         text-align: center;  
+         margin-left: auto;
+         margin-right: auto;
+         margin-top: 12%;
+         }
+
+         td {
+         background-color: grey;
+         }
+
+         h1 {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin-top: 5%;
+         }
+      </style>
+   </head> 
+   <body> 
+      <h1>Calculatrice en ligne</h1>
+      <table border="1"> 
+         <tr> 
+            <td colspan="3"><input id="output"/></td> 
+            <td><button onclick="effacer()">C</button></td> 
+         </tr> 
+         <tr>
+            <td><button onclick="afficher('1')">1</button></td> 
+            <td><button onclick="afficher('2')">2</button></td> 
+            <td><button onclick="afficher('3')">3</button></td> 
+            <td><button onclick="afficher('+')">+</button></td> 
+         </tr> 
+         <tr> 
+            <td><button onclick="afficher('4')">4</button></td> 
+            <td><button onclick="afficher('5')">5</button></td> 
+            <td><button onclick="afficher('6')">6</button></td> 
+            <td><button onclick="afficher('-')">-</button></td> 
+         </tr> 
+         <tr> 
+            <td><button onclick="afficher('7')">7</button></td> 
+            <td><button onclick="afficher('8')">8</button></td> 
+            <td><button onclick="afficher('9')">9</button></td> 
+            <td><button onclick="afficher('*')">*</button></td> 
+         </tr> 
+         <tr>
+            <td><button onclick="afficher('.')">.</button></td> 
+            <td><button onclick="afficher('0')">0</button></td> 
+            <td><button onclick="calculer()">=</button></td> 
+            <td><button onclick="afficher('/')">/</button></td>
+         </tr> 
+      </table> 
+   </body> 
+</html>
